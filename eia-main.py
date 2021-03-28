@@ -37,7 +37,7 @@ def download_all_zip():
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")
     print(soup.title.text)
-    all_anchor_tags = soup.find_all(name='a')
+    all_anchor_tags = soup.find_all(name="a")
 
     downloadable_links = {}
     for link in all_anchor_tags:
